@@ -1,0 +1,27 @@
+{
+  "name": "document.cookie.mock",
+  "version": "0.1.0",
+  "description": "An implementation of document.cookie to use in testing",
+  "main": "cookie.mock.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Panintelligence/document.cookie.mock.git"
+  },
+  "keywords": [
+    "mock",
+    "cookie",
+    "document"
+  ],
+  "author": "Tiago Correia",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/Panintelligence/document.cookie.mock/issues"
+  },
+  "homepage": "https://github.com/Panintelligence/document.cookie.mock#readme",
+  "devDependencies": {
+    "mocha": "^6.1.4"
+  }
+}
