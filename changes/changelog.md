@@ -1,4 +1,4 @@
-# ![Cookie Mock Logo](images/cookie-mock-logo-small.png) Cookie Mock Changelog
+# ![Cookie Mock Logo](images/document.cookie.mock-logo-small.png) Cookie Mock Changelog
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
