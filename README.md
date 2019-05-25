@@ -1,4 +1,4 @@
-# document.cookie.mock
+# ![Cookie Mock Logo](changes/images/cookie-mock-logo-small.png) Cookie Mock 
 An implementation of document.cookie to use in node that behaves just like `document.cookie` on a browser.
 
 Useful for testing!
