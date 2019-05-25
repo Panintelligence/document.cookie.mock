@@ -18,7 +18,7 @@ Useful for testing!
 
 ## Installation
 ```bash
-npm install document.cookie.mock
+npm i @panintelligence/document.cookie.mock
 ```
 
 ## How to use
