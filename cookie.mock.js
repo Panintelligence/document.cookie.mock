@@ -22,7 +22,7 @@ class DocumentCookie {
         let now = new Date();
         const values = this.value;
         return Object.keys(values).filter(function (key) {
-            return values[key].expires === null || now <= values[key].expires;
+            return values[key].expires === null || now <= new Date(values[key].expires);
         }).map(function (key) {
             if (key === '') {
                 return values[key].value;
@@ -44,7 +44,8 @@ class DocumentCookie {
         const maxAge = this.getKeyValuePairByKey(v, "max-age");
         if (maxAge) {
             let date = new Date();
-            expires = date.setTime(date.getTime() + (maxAge * 1000));
+            date.setTime(date.getTime() + (maxAge * 1000));
+            expires = date.toUTCString();
         }
         this.value[key] = {
             value: value.trim(),

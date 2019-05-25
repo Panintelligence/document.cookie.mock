@@ -83,5 +83,32 @@ describe(`cookie.mock`, function () {
             document.cookie = "test1=oneone;";
             assert.equal(document.cookie, 'test1=oneone; test2=two');
         });
+
+        it(`should parse the expired date correctly`, function () {
+            const document = new DocumentCookie();
+            let date = new Date();
+            date.setTime(date.getTime() + (1 * 24 * 60 * 60 * 1000));
+            document.cookie = `test=one; expires=${date.toUTCString()}; path=/`;
+            assert.equal(document.cookie, 'test=one');
+        });
+
+        it(`should properly expire if the expiry time has passed`, function () {
+            const document = new DocumentCookie();
+            let date = new Date();
+            
+            date.setTime(new Date().getTime() + 5000);
+            document.cookie = `test=one; expires=${date.toUTCString()}; path=/`;
+            assert.equal(document.cookie, 'test=one');
+
+            date.setTime(new Date().getTime() - 1000);
+            document.cookie = `test2=two; expires=${date.toUTCString()}; path=/`;
+            assert.equal(document.cookie, 'test=one');
+
+            document.cookie = `test3=three; max-age=1; path=/`;
+            assert.equal(document.cookie, 'test=one; test3=three');
+
+            document.cookie = `test4=four; max-age=-1; path=/`;
+            assert.equal(document.cookie, 'test=one; test3=three');
+        });
     });
 });
