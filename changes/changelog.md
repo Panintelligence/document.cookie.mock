@@ -2,6 +2,10 @@
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
+## [0.1.1] - 2019-05-25
+### Changed
+- Updated scope to belong to panintelligence
+
 ## [0.1.0] - 2019-05-25
 ### Added
 - Cookie mock that behaves like `document.cookie`. See [README.md](../README.md)
