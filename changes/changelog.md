@@ -2,6 +2,10 @@
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
+## [0.1.4] - 2019-07-22
+### Security
+- Updated `mocha` to resolve security issue with `lodash`.
+
 ## [0.1.3] - 2019-05-25
 ### Fixed
 - Fixed expired date not being compared correctly.

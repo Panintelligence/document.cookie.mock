@@ -22,6 +22,6 @@
   },
   "homepage": "https://github.com/Panintelligence/document.cookie.mock#readme",
   "devDependencies": {
-    "mocha": "^6.1.4"
+    "mocha": "^6.2.0"
   }
 }
