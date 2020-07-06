@@ -66,6 +66,6 @@ class Document {
 ## Development
 ```bash
 git clone git@github.com:Panintelligence/document.cookie.mock.git
-cd document.cookie.mock.git
+cd document.cookie.mock
 npm install
 ```
