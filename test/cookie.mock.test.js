@@ -54,6 +54,12 @@ describe(`cookie.mock`, function () {
             assert.equal(document.cookie, 'undefined; test2=two');
         });
 
+        it(`should handle values with =`, function () {
+            const document = new DocumentCookie();
+            document.cookie = "test2=two=2";
+            assert.equal(document.cookie, 'test2=two=2');
+        });
+
         it(`should handle undefineds and nulls`, function () {
             const document = new DocumentCookie();
             document.cookie = undefined;

@@ -39,7 +39,7 @@ class DocumentCookie {
         }
 
         const key = keyValueSplit.length > 1 ? keyValueSplit[0].trim() : '';
-        const value = keyValueSplit.length > 1 ? keyValueSplit[1] : keyValueSplit[0];
+        const value = keyValueSplit.length > 1 ? keyValueSplit.slice(1).join("=") : keyValueSplit[0];
         let expires = this.getKeyValuePairByKey(v, "expires");
         const maxAge = this.getKeyValuePairByKey(v, "max-age");
         if (maxAge) {
